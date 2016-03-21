@@ -1,0 +1,630 @@
+@import "_bootstrap";
+//main page background color
+$bg-color-main: rgb(35,
+40,
+49);
+//mixin for mobile
+@mixin col-width($wdth) {
+    @media screen and (max-width: 320px) {
+        .col-xs-6 {
+            width: $wdth;
+        }
+    }
+    @media screen and (max-width: 760px) {
+        .col-xs-6 {
+            width: $wdth;
+        }
+    }
+}
+@mixin btn-style($bg-color,
+$br-radius,
+$wd) {
+    background-color: $bg-color;
+    border-radius: $br-radius;
+    width: $wd;
+}
+@mixin img-res($height,
+$width) {
+    display: block;
+    height: $height;
+    width: $width;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+//head section
+.head {
+    .navbar {
+        
+        .navbar-toggle {
+            .icon-bar {
+                color: rgb(131, 95, 168);
+            }
+
+        }
+         .navbar-slide {
+            top: -60px;
+        }
+
+        
+        .navbar-form {
+            width: 500px;
+        }
+        .form-group {
+            font-size: 14px;
+            font-family: "OpenSans";
+            color: rgb(157, 165, 176);
+            line-height: 5.324;
+            .form-control {
+                background-color: rgb(52, 60, 72);
+                box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.5);
+                border-radius: 24px;
+            }
+            .round {
+                @include btn-style(rgb(131, 95, 168), 24px, 35%);
+                margin-left: 20px;
+
+            }
+            .btn-radius{
+                border-radius: 24px;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 760px) {
+        .navbar {
+            margin-top: 0px;
+            background: #fff;
+        }
+    }
+}
+//main-page
+.mast-head {
+    background-color: $bg-color-main;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    z-index: 1;
+    .con-width {
+        width: 600px;
+        margin-top: 200px;
+        text-align: right;
+        margin-right: 120px;
+        right: 0;
+    }
+    @media screen and (max-width: 760px) {
+        .con-width {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        .Building_bulletproof__fucking_apps {
+            font-size: 50px;
+        }
+        .main-text-kickstarter {
+            font-size: 16px;
+            margin-top: 30px;
+        }
+    }
+}
+.bg-color-masthead {
+    background-color: $bg-color-main;
+}
+.main-area {
+    @extend .row;
+}
+.mast-head .block-bg {
+    background-image: url("../img/main-bg.jpg");
+}
+.block-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.15;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 120%;
+    width: 100%;
+}
+.Building_bulletproof__fucking_apps {
+    font-size: 70px;
+    font-family: "OpenSans";
+    color: rgb(255, 255, 255);
+    line-height: normal;
+    text-align: left;
+}
+.main-text-kickstarter {
+    font-size: 20px;
+    font-family: "OpenSans";
+    color: rgb(255, 255, 255);
+    line-height: normal;
+    text-align: left;
+    margin-top: 50px;
+}
+//design section
+.section-design {
+    .mobile {
+        position: relative;
+        float: right;
+    }
+    .above {
+        z-index: 3;
+        right: 16%;
+    }
+    .beyond {
+        left: 0;
+        z-index: 1;
+        position: absolute;
+        bottom: 0;
+    }
+    .round {
+        @include btn-style(rgb(61, 210, 174), 24px, 50%);
+    }
+    .design-text1 {
+        font-size: 40px;
+        font-family: "OpenSans";
+        color: rgb(255, 255, 255);
+        line-height: 2.25;
+    }
+    .design-text2 {
+        font-size: 16px;
+        font-family: "OpenSans";
+        color: rgb(255, 255, 255);
+        line-height: 1.625;
+    }
+    @media screen and (max-width: 999px) {
+        .mobile {
+            float: none;
+        }
+        .above {
+            z-index: 2;
+            left: 50%;
+        }
+        width:100%;
+    }
+    @media screen and (max-width: 760px) {
+        .design-col-width {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .design-text1 {
+            font-size: 30px;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        .mobile {
+            float: none;
+        }
+        .above {
+            z-index: 2;
+            left: 50%;
+        }
+    }
+    background-color: rgb(131,
+    95,
+    168);
+}
+//features section
+.section-features {
+    .feature-text1 {
+        font-size: 30px;
+        font-family: "OpenSans";
+        color: rgb(43, 48, 59);
+        line-height: 1.833;
+        -moz-transform: matrix( 0.99972047289409, 0, 0, 0.9997257453743, 0, 0);
+        -webkit-transform: matrix( 0.99972047289409, 0, 0, 0.9997257453743, 0, 0);
+        -ms-transform: matrix( 0.99972047289409, 0, 0, 0.9997257453743, 0, 0);
+    }
+    .feature-text2 {
+        font-size: 20px;
+        font-family: "OpenSans";
+        color: rgb(105, 111, 124);
+        line-height: 1.5;
+        -moz-transform: matrix( 0.99972047289409, 0, 0, 0.9997257453743, 0, 0);
+        -webkit-transform: matrix( 0.99972047289409, 0, 0, 0.9997257453743, 0, 0);
+        -ms-transform: matrix( 0.99972047289409, 0, 0, 0.9997257453743, 0, 0);
+    }
+    .feature-text3 {
+        font-size: 14px;
+        font-family: "Myriad Pro";
+        color: rgb(105, 111, 124);
+        line-height: 1.875;
+    }
+    .btn-primary {
+        font-size: 14px;
+        font-family: "OpenSans";
+        color: rgb(255, 255, 255);
+        line-height: 1.524;
+        text-align: center;
+    }
+    .round {
+        @include btn-style(rgb(61, 210, 174), 24px, 50%);
+    }
+}
+//screen0
+.section-screen0 {
+    text-align: center;
+    background-color: rgb(35, 40, 49);
+    margin-top: 50px;
+    .screen0-heading {
+        .screen0-text1 {
+            font-size: 40px;
+            font-family: "OpenSans";
+            color: rgb(255, 255, 255);
+            line-height: 1.375;
+            text-align: center;
+        }
+        .screen0-text2 {
+            font-size: 16px;
+            font-family: "Myriad Pro";
+            color: rgb(157, 165, 176);
+            line-height: 1.875;
+            text-align: center;
+        }
+    }
+    .screen0-img {
+        display: block;
+        margin: 0 auto;
+    }
+    .design-bg-img {
+        background-image: url("../img/design-img.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100px;
+        width: 100%;
+    }
+    @media screen and (max-width: 760px) {
+        .screen0-img {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+//section1
+.section-screen1 {
+    background: #2b303b;
+    padding-top: 50px;
+    .screen1-text1 {
+        font-size: 20px;
+        font-family: "OpenSans";
+        color: rgb(58, 77, 96);
+        line-height: 1.5;
+    }
+    .screen1-text2 {
+        margin-left: 6px;
+        font-size: 18px;
+        font-family: "Myriad Pro";
+        color: rgb(255, 255, 255);
+        line-height: 1.5;
+    }
+    .screen1-text3 {
+        font-size: 14px;
+        font-family: "OpenSans";
+        color: rgb(157, 165, 176);
+        line-height: 1.857;
+    }
+}
+//section2
+.section-screen2 {
+    text-align: center;
+    background-color: rgb(233, 238, 241);
+    .screen2-text1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: "OpenSans";
+        color: rgb(43, 48, 59);
+        line-height: 1.375;
+    }
+    .screen2-text2 {
+        text-align: justify;
+        font-size: 20px;
+        font-family: "OpenSans";
+        color: rgb(105, 111, 124);
+        line-height: 1.5;
+    }
+    .screen2-text3 {
+        text-align: justify;
+        font-size: 13px;
+        font-family: "OpenSans";
+        color: rgb(105, 111, 124);
+        line-height: 1.5;
+    }
+    .img-con {
+        @include img-res(auto, 100%);
+    }
+    .item{
+        display: block;width: 80%;  margin: 0 auto;
+    }
+    @media screen and (max-width: 990px) {
+        .img-con {
+                @include img-res(320px, 100%);
+            }
+            .item{
+                width: 100%; 
+            }
+
+         }
+
+}
+//section 3
+.section-screen3 {
+    .container-fluid {
+        padding-left: 0px;
+        padding-right: 0px;
+        .row {
+            width: 100%;
+            .col-sm-5 {
+                padding-left: 0px;
+                padding-right: 0px;
+                .screen3-rectangle1 {
+                    margin-left: 145px;
+                }
+                @media screen and (max-width: 1300px) {
+                    .screen3-rectangle1 {
+                        
+                        width: 400px;
+                        height: 450px;
+                    }
+                }
+                @media screen and (max-width: 1200px) {
+                    .screen3-rectangle1 {
+                        margin-left: 140px;
+                        width: 350px;
+                        height: 366PX;
+                    }
+                }
+                @media screen and (max-width: 990px) {
+                    .screen3-rectangle1 {
+                        width:320px;
+                        height:340px;
+                        margin-left: 0px;
+                    }
+                }
+                 @media screen and (max-width: 320px) {
+                    .screen3-rectangle1 {
+                        width:100%;
+                        height:50%;
+                        display:block;
+                }
+                }
+                 @media screen and (max-width: 760px) {
+                    .screen3-rectangle1 {
+                        width:100%;
+                        height:340px;
+                        display:block;
+                }
+                }
+
+            }
+            .col-sm-7 {
+                padding-left: 0px;
+                padding-right: 0px;
+                background-color: rgb(131, 95, 168);
+                .screen3-rectangle2 {
+                    margin-left: 20px;
+                    width: 100%;
+                    height: 356px;
+                    .screen3-title {
+                        .screen3-text1 {
+                            font-size: 12px;
+                            font-family: "OpenSans";
+                            color: rgb(255, 255, 255);
+                            font-style: italic;
+                            line-height: 3.75;
+                        }
+                        .screen3-text2 {
+                            font-size: 32px;
+                            font-family: "Myriad Pro";
+                            color: rgb(255, 255, 255);
+                            line-height: 1.375;
+                        }
+                    }
+                }
+                @media screen and (max-width: 1300px) {
+                    .screen3-rectangle2 {
+                        height: 450px;
+                        width: auto;
+                    }
+                }
+                    @media screen and (max-width: 1200px) {
+                        .screen3-rectangle2 {
+                               height: 366px;
+                             width: auto;
+                    }
+                }
+                 @media screen and (max-width: 990px) {
+                        .screen3-rectangle2 {
+                            height: 340px;
+                             width: auto;
+                    }
+                }
+                @media screen and (max-width: 320px) {
+                        .screen3-rectangle2 {
+                            height: auto;
+                             width: 100%;
+                             display:block;
+                    }
+                }
+            }
+        }
+    }
+}
+//section four
+.section-screen4 {
+    .container {
+        width: 960px;
+    }
+    .title {
+        .screen4-text1 {
+            font-size: 23px;
+            font-family: "Myriad Pro";
+            color: rgb(35, 35, 35);
+        }
+        .screen4-text2 {
+            font-size: 14px;
+            font-family: "Myriad Pro";
+            color: rgb(131, 150, 159);
+            line-height: 1.786;
+        }
+    }
+    .comments {
+        .screen4-num {
+            font-size: 30px;
+            font-family: "OpenSans";
+            color: rgb(131, 150, 159);
+            line-height: 1.333;
+        }
+        .screen4-text3 {
+            font-size: 12px;
+            font-family: "OpenSans";
+            color: rgb(131, 150, 159);
+            line-height: 3.833;
+            text-align: center;
+            margin-left: 25px;
+        }
+    }
+    @media screen and (max-width: 320px) {
+    .title {
+        width:100%;
+        margin:0 auto;
+        .screen4-text1 {
+            width:80%;
+        }
+        .screen4-text2 {
+                width: 60%;
+                 text-align: justify;
+
+        }
+     }
+    }
+    @media screen and (max-width: 760px) {
+    .title {
+        width:100%;
+        margin:0 auto;
+        .screen4-text1 {
+            width:100%;
+        }
+        .screen4-text2 {
+                width: 80%;
+                 text-align: justify;
+
+        }
+     }
+    }
+
+
+}
+//section five
+.section-screen5,
+.section-screen5-bg {
+    background-image: url("../img/sc5-bg1.jpg");
+}
+.section-screen5 {
+    background-image: url("../img/sc5-bg1.jpg");
+    background-size: cover;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    z-index: 1;
+    .section-screen5-text1 {
+        font-size: 32px;
+        font-family: "Myriad Pro";
+        color: rgb(255, 255, 255);
+    }
+    .section-screen5-text2 {
+        font-size: 15px;
+        font-family: "OpenSans";
+        color: rgb(255, 255, 255);
+    }
+    .section-screen5-bg {
+        backgroud-color: rgb(131, 95, 168);
+    }
+    .rectangle-4 {
+        background-color: rgb(131, 95, 168);
+        padding: 8%;
+        width: 41%;
+    }
+    .container-fluid {
+        padding-left: 0px;
+    }
+}
+//contact section
+$contact-background-color: #1A2124;
+.section-contact {
+    background-color: $contact-background-color;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .container {
+        width: 960px;
+    }
+    .row {
+        @include make-row;
+    }
+    .section-contact-text1 {
+        font-size: 13px;
+        font-family: "OpenSans";
+        color: rgb(246, 247, 250);
+    }
+    .section-contact-text2 {
+        font-size: 12px;
+        font-family: "OpenSans";
+        color: rgb(246, 247, 250);
+    }
+    .section-contact-text3 {
+        font-size: 12px;
+        font-family: "OpenSans";
+        color: rgb(246, 247, 250);
+        padding-top: 20px;
+    }
+    .form-control {
+        height: 40px;
+    }
+    .btn-default {
+        height: 40px;
+        width: 25%;
+    }
+    .input-group {
+        width: 100%;
+    }
+    @media screen and (max-width: 960px) {
+        .container {
+            width: 80%;
+        }
+        .section-contact {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    @include col-width(100%);
+}
+@media screen and (max-width: 760px) {
+    .design-col-width {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+/*
+
+
+
+
+
+
+
+*/
